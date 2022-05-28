@@ -25,6 +25,10 @@ class Concessionaria {
     private endereco: string
     private listaDeCarros: any
 
+    constructor(endereco: string) {
+        this.endereco = endereco
+    }
+
     public fornecerEndereco(): string {
         return this.endereco
 
@@ -35,5 +39,37 @@ class Concessionaria {
     }
 }
 
-let concessionaria = new Concessionaria('Av Norte');
-console.log(concessionaria)
+class Pessoa{
+    private nome: string
+    private carroPreferido: string
+    private carro: any
+
+    constructor(nome: string, carroPreferido: string){
+        this.nome = nome
+        this.carroPreferido = carroPreferido
+    }
+
+    public dizerNome(): string{
+        return this.nome
+    }
+
+    public dizerCarroPrefetido(): string{
+        return this.carroPreferido
+    }
+
+    public comprarCarro(carro: any): void{
+        this.carro = carro
+    }
+
+    public dizerCarroQueTem(): any {
+        return this.carro
+    }
+}
+
+/*--- Criar carros ---*/
+let carroA = new Carro('dodge journey', 4)
+let carroB = new Carro('audi a6', 3)
+let carroC = new Carro('cerato', 4)
+
+/*--- montar a lista de carros da concessionaria ---*/
+/* Aula 67 - Aplicando regras de negocio */

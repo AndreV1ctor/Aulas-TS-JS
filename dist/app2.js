@@ -17,7 +17,8 @@ var Carro = /** @class */ (function () {
     return Carro;
 }());
 var Concessionaria = /** @class */ (function () {
-    function Concessionaria() {
+    function Concessionaria(endereco) {
+        this.endereco = endereco;
     }
     Concessionaria.prototype.fornecerEndereco = function () {
         return this.endereco;
@@ -27,5 +28,28 @@ var Concessionaria = /** @class */ (function () {
     };
     return Concessionaria;
 }());
-var concessionaria = new Concessionaria('Av Norte');
-console.log(concessionaria);
+var Pessoa = /** @class */ (function () {
+    function Pessoa(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    Pessoa.prototype.dizerNome = function () {
+        return this.nome;
+    };
+    Pessoa.prototype.dizerCarroPrefetido = function () {
+        return this.carroPreferido;
+    };
+    Pessoa.prototype.comprarCarro = function (carro) {
+        this.carro = carro;
+    };
+    Pessoa.prototype.dizerCarroQueTem = function () {
+        return this.carro;
+    };
+    return Pessoa;
+}());
+/*--- Criar carros ---*/
+var carroA = new Carro('dodge journey', 4);
+var carroB = new Carro('audi a6', 3);
+var carroC = new Carro('cerato', 4);
+/*--- montar a lista de carros da concessionaria ---*/
+/* Aula 67 - Aplicando regras de negocio */ 
